@@ -19,7 +19,7 @@ DUMP_FILE="files/${DUMP_NAME}"
 
 # Render HTML+JS and dump the file
 echo "Rendering to ${DUMP_FILE}"
-phantomjs dump.js ${URL} > "${DUMP_FILE}"
+phantomjs render.js ${URL} > "${DUMP_FILE}"
 
 # wget to tmp dir
 TMP_DIR=`mktemp -d -t`
