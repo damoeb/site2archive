@@ -17,9 +17,8 @@ Getting Started
 
 Starting the proxy
 
-```./server.sh```
+    ./server.sh
 
 Dump the file
 
-```./site2archive.sh <your-url>```
-
+    ./site2archive.sh <your-url>
