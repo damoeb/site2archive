@@ -18,7 +18,9 @@ page.open(address, function (status) {
     } else {
         window.setTimeout(function () {
             var content = page.content;
-            console.log(content);
+            // adding base tag for relative to absolute link resolution done by wget
+            content = content.replace(/<head>/ig,'<head><base href="'+address+'">');
+	    console.log(content);
             phantom.exit();
         }, 2000);
     }
