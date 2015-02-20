@@ -27,7 +27,7 @@ Scrape the site with resources
 Details
 -------
 
-1. Render site using phantomjs
+1. Render site using phantomjs (render.js)
 2. Adding the <base> tag to persist link consistency
 3. Fetch all resources and rewrite url to local using wget
 4. Create an archive
