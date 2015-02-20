@@ -26,6 +26,6 @@ Scrape the site with resources
 How It Works
 ------------
 
-1. Render site using phantomjs (*render.js*) to the directory *server.sh* is watching. We add the <base> tag to persist link consistency
+1. Render site using phantomjs (*render.js*) to the directory *server.sh* is watching. We add the *base* tag to persist link consistency
 2. Fetch all resources and rewrite url to local using wget by accessing the just rendered markup via localhost
 3. Create an archive
