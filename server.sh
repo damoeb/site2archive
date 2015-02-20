@@ -1,2 +1,2 @@
 #!/bin/sh
-cd server && python -m SimpleHTTPServer 9900
+cd files && python -m SimpleHTTPServer 9900
