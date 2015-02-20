@@ -24,10 +24,9 @@ Scrape the site with resources
     ./site2archive.sh <url> <archive-name>
 
 
-Details
--------
+How It Works
+------------
 
-1. Render site using phantomjs (render.js)
-2. Adding the <base> tag to persist link consistency
-3. Fetch all resources and rewrite url to local using wget
-4. Create an archive
+1. Render site using phantomjs (render.js) to the directory *server.sh* is watching. We add the <base> tag to persist link consistency
+2. Fetch all resources and rewrite url to local using wget by accessing the just rendered markup via localhost
+3. Create an archive
