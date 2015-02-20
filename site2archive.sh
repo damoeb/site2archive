@@ -10,7 +10,7 @@ usage ()
 }
 
 [ -n "$1" ] || usage
-[ -e "$2" ] || usage
+[ -n "$2" ] || usage
 
 echo "URL ${URL}"
 ESC_URL=$(echo "${URL}" | sed -e 's/[a-z:]*\/\///g' | sed -e 's/\//_/g')
@@ -24,10 +24,11 @@ phantomjs render.js ${URL} > "${DUMP_FILE}"
 # wget to tmp dir
 TMP_DIR=`mktemp -d -t`
 
-# wget will download all resources and rewrite pathes
-`wget --quiet -E -H -k -K -p --no-directories -P $TMP_DIR localhost:${PORT}/${DUMP_NAME}`
+echo "Scraping to $TMP_DIR"
 
-echo "Full dump to $TMP_DIR"
+# wget will download all resources and rewrite pathes
+# see http://superuser.com/questions/55040
+`wget --quiet -E -H -k -K -p --no-directories -P $TMP_DIR localhost:${PORT}/${DUMP_NAME}`
 
 # rename to index.html
 `mv $TMP_DIR/${DUMP_NAME} $TMP_DIR/index.html`
