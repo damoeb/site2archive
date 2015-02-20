@@ -15,10 +15,19 @@ Requirements
 Getting Started
 ---------------
 
-Starting the proxy
+Starting the local webserver (needed for wget)
 
     ./server.sh
 
-Dump the file
+Scrape the site with resources
 
-    ./site2archive.sh <your-url>
+    ./site2archive.sh <your-url> <archive-name>
+
+
+Details
+-------
+
+1. Render site using phantomjs
+2. Adding the <base> tag to persist link consistency
+3. Fetch all resources and rewrite url to local using wget
+4. Create an archive
