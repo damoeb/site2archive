@@ -21,7 +21,7 @@ Starting the local webserver (needed for wget)
 
 Scrape the site with resources
 
-    ./site2archive.sh <your-url> <archive-name>
+    ./site2archive.sh <url> <archive-name>
 
 
 Details
