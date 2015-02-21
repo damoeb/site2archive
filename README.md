@@ -6,9 +6,10 @@ site2archive
 Requirements
 ------------
 
-- python 3+
+- python 2.7+
 - phantomjs 1.9+
-- GNU Wget 1.15
+- GNU Wget 1.15+
+- GNU tar 1.27.1+
 
 
 Getting Started
