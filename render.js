@@ -3,7 +3,7 @@ var page = require('webpage').create(),
     address, output, size;
 
 if (system.args.length < 2) {
-    console.log('Usage: dump.js <URL>');
+    console.log('Usage: render.js <URL>');
     phantom.exit(1);
 } 
 
